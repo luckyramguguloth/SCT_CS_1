@@ -1,14 +1,12 @@
 # Task 01: Caesar Cipher Tool
 
-An interactive command-line interface tool implemented in Python to encrypt and decrypt text using the classic Caesar Cipher algorithm.
+An interactive command-line tool implemented in Python to encrypt and decrypt text using the Caesar Cipher algorithm.
 
 ## Features
 *   **Case Sensitivity**: Preserves uppercase and lowercase lettering formatting.
 *   **Punctuation Preservation**: Ignores symbols, punctuation marks, numbers, and spaces so they are left untouched.
 *   **Modular Math Shift Support**: Handles positive, negative, and large integer keys gracefully (e.g., a shift key of 28 is correctly normalized to a shift of 2).
 *   **Simple Interactive Loop**: Allows continuous operations without restarting the script.
-
-## Getting Started
 
 ### Prerequisites
 *   Python 3.x installed.
