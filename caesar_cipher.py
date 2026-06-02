@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 Task 01: Caesar Cipher Tool
 SkillCraft Technology Cybersecurity Internship
@@ -11,15 +10,6 @@ and leaves numeric and punctuation symbols untouched.
 import sys
 
 def caesar_cipher(text: str, shift: int, mode: str) -> str:
-    """
-    Encrypts or decrypts a text string using the Caesar Cipher algorithm.
-    
-    :param text: The input string to process.
-    :param shift: The key shift value (can be any positive or negative integer).
-    :param mode: Either 'encrypt' or 'decrypt'.
-    :return: The processed string.
-    """
-    # Normalize the shift key to be within the 0-25 range
     if mode.lower() == 'decrypt':
         shift = -shift
     
@@ -28,13 +18,10 @@ def caesar_cipher(text: str, shift: int, mode: str) -> str:
     
     for char in text:
         if char.isalpha():
-            # Check ASCII base for uppercase/lowercase
             base = ord('A') if char.isupper() else ord('a')
-            # Calculate new position with wrap-around
             new_char = chr(base + (ord(char) - base + normalized_shift) % 26)
             result.append(new_char)
         else:
-            # Leave non-alphabet characters as they are
             result.append(char)
             
     return "".join(result)
